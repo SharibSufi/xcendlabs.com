@@ -11,11 +11,18 @@ const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate initial loading
+    // Simulate initial loading with a shorter timeout
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 800);
+    }, 500);
 
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Only handle scroll reveal after content is loaded
+  useEffect(() => {
+    if (isLoading) return;
+    
     // Add scroll reveal functionality
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     const revealElementsOnScroll = () => {
@@ -30,13 +37,15 @@ const Index = () => {
     };
 
     window.addEventListener('scroll', revealElementsOnScroll);
-    revealElementsOnScroll(); // Check on initial load
+    // Check on initial load
+    setTimeout(() => {
+      revealElementsOnScroll();
+    }, 100);
     
     return () => {
-      clearTimeout(timer);
       window.removeEventListener('scroll', revealElementsOnScroll);
     };
-  }, []);
+  }, [isLoading]);
 
   if (isLoading) {
     return (
@@ -53,9 +62,9 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <main className="bg-white">
+      <main>
         <Hero />
         <Services />
         <Testimonials />
