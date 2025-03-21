@@ -35,8 +35,8 @@ const Testimonials = () => {
     >
       <div className="absolute top-0 left-0 w-full h-full pattern-grid opacity-30"></div>
       
-      {/* Center Graphic Element - now with lower z-index */}
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 opacity-5 pointer-events-none z-0">
+      {/* Center Graphic Element */}
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 opacity-10 pointer-events-none z-0">
         <div className="absolute inset-0 rounded-full bg-xcend-400 animate-pulse-subtle"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-full h-full relative">
