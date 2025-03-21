@@ -1,6 +1,6 @@
 
 import { useRef } from 'react';
-import { Star } from 'lucide-react';
+import { Star, BarChart3, TrendingUp, LineChart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const testimonials = [
@@ -34,6 +34,27 @@ const Testimonials = () => {
       ref={sectionRef}
     >
       <div className="absolute top-0 left-0 w-full h-full pattern-grid opacity-30"></div>
+      
+      {/* Center Graphic Element */}
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 opacity-10 pointer-events-none z-0">
+        <div className="absolute inset-0 rounded-full bg-xcend-400 animate-pulse-subtle"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-full h-full relative">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <BarChart3 className="w-16 h-16 text-xcend-600" strokeWidth={1.5} />
+            </div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+              <LineChart className="w-16 h-16 text-xcend-600" strokeWidth={1.5} />
+            </div>
+            <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <TrendingUp className="w-16 h-16 text-xcend-600" strokeWidth={1.5} />
+            </div>
+            <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
+              <BarChart3 className="w-16 h-16 text-xcend-600" strokeWidth={1.5} />
+            </div>
+          </div>
+        </div>
+      </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4 reveal-on-scroll">
