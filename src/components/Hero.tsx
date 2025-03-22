@@ -48,7 +48,7 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-balance animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Elevate Your Business with <span className="gradient-text">Strategic Automation</span>
+              Elevate Your Digital Presence with <span className="gradient-text">XcendLabs</span>
             </h1>
             
             <p className="text-lg text-gray-300 max-w-xl animate-fade-in" style={{ animationDelay: '0.4s' }}>
