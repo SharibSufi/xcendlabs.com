@@ -14,7 +14,7 @@ const Index = () => {
     // Simulate initial loading with a shorter timeout
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, []);
@@ -49,20 +49,25 @@ const Index = () => {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
-        <div className="space-y-6 text-center">
-          <div className="text-3xl font-semibold tracking-tight">
-            <span className="text-xcend-600">Xcend</span>
-            <span className="font-light">Labs</span>
+      <div className="fixed inset-0 bg-cyber-black flex items-center justify-center z-50">
+        <div className="space-y-8 text-center">
+          <div className="text-4xl font-orbitron tracking-wider">
+            <span className="text-cyan-400">Xcend</span>
+            <span className="font-light text-white">Labs</span>
           </div>
-          <div className="w-12 h-12 border-t-2 border-xcend-500 border-r-2 border-b-2 border-transparent rounded-full animate-spin mx-auto"></div>
+          <div className="w-16 h-16 relative mx-auto">
+            <div className="absolute inset-0 rounded-full border-t-2 border-r-2 border-cyan-500 animate-spin"></div>
+            <div className="absolute inset-0 rounded-full border-b-2 border-l-2 border-purple-500 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+          </div>
+          <div className="text-sm text-cyan-400/80 font-mono animate-pulse">Initializing Interface</div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-cyber-black text-white font-exo">
+      <div className="cyber-grid absolute inset-0 pointer-events-none"></div>
       <Navbar />
       <main>
         <Hero />
