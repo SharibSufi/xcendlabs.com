@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +28,6 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center group">
-          <Zap className="w-6 h-6 text-cyan-400 mr-2 animate-pulse-glow" />
           <h1 className="text-2xl font-orbitron tracking-wider">
             <span className="text-cyan-400 group-hover:text-white transition-colors duration-300">Xcend</span>
             <span className="font-light group-hover:text-cyan-400 transition-colors duration-300">Labs</span>
@@ -84,6 +83,13 @@ const Navbar = () => {
         )}
       >
         <div className="absolute inset-0 cyber-grid opacity-10 pointer-events-none"></div>
+        <button 
+          className="absolute top-6 right-6 text-cyan-400 focus:outline-none"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          <X className="w-6 h-6" />
+        </button>
         <nav className="flex flex-col space-y-8">
           <a 
             href="#services" 
