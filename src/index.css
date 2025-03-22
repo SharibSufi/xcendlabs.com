@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +25,8 @@
     --input: 0 0% 14%;
     --ring: 0 0% 98%;
     --radius: 0.5rem;
+    --cyber-blue: 180 100% 50%;
+    --cyber-purple: 300 100% 50%;
   }
 
   .dark {
@@ -79,6 +82,12 @@
     backdrop-filter: blur(8.5px);
     -webkit-backdrop-filter: blur(8.5px);
     border: 1px solid rgba(255, 255, 255, 0.13);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .glass-panel:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 50, 120, 0.15);
   }
 
   .glass-panel-dark {
@@ -130,10 +139,62 @@
     opacity: 1;
     transform: translateY(0);
   }
+  
+  /* Service card hover effects */
+  .service-card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .service-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 140, 255, 0.2);
+  }
+  
+  /* Floating animation for service icons */
+  .icon-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Interactive link hover effect */
+  .interactive-link {
+    position: relative;
+  }
+  
+  .interactive-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(to right, theme('colors.xcend.300'), theme('colors.xcend.500'));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .interactive-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 @layer utilities {
   .animate-border-flow {
     animation: border-flow 2s linear infinite;
+  }
+  
+  .hover-card-effect {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .hover-card-effect:hover {
+    transform: translateY(-5px);
   }
 }

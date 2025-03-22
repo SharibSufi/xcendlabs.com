@@ -28,7 +28,17 @@ const Footer = () => {
       className="bg-xcend-950 text-white py-16 px-6 md:px-12 relative overflow-hidden"
       ref={footerRef}
     >
-      <div className="absolute top-0 left-0 w-full h-full pattern-grid opacity-10"></div>
+      {/* Enhanced footer background with multiple elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-xcend-950 to-black/90"></div>
+      <div className="absolute inset-0 cyber-grid opacity-10"></div>
+      
+      {/* Add subtle animated glow effects */}
+      <div className="absolute bottom-0 left-1/4 w-56 h-56 rounded-full bg-xcend-700/10 blur-3xl animate-pulse-subtle"></div>
+      <div className="absolute top-0 right-1/4 w-64 h-64 rounded-full bg-xcend-500/10 blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-gradient-to-br from-xcend-400/5 to-xcend-600/10 blur-3xl"></div>
+      
+      {/* Add horizontal line with gradient */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-xcend-400/40 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 reveal-on-scroll">
@@ -43,7 +53,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-xcend-800 flex items-center justify-center hover:bg-xcend-700 transition-colors"
+                className="w-10 h-10 rounded-full bg-xcend-800/50 backdrop-blur-sm flex items-center justify-center hover:bg-xcend-600 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +62,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-xcend-800 flex items-center justify-center hover:bg-xcend-700 transition-colors"
+                className="w-10 h-10 rounded-full bg-xcend-800/50 backdrop-blur-sm flex items-center justify-center hover:bg-xcend-600 transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +71,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-xcend-800 flex items-center justify-center hover:bg-xcend-700 transition-colors"
+                className="w-10 h-10 rounded-full bg-xcend-800/50 backdrop-blur-sm flex items-center justify-center hover:bg-xcend-600 transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -72,30 +82,35 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-xcend-100">Services</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Custom Automation
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   GHL Automation
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Funnel Building
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Email Marketing
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Social Media Growth
                 </a>
               </li>
@@ -103,30 +118,35 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6">Company</h4>
+            <h4 className="text-lg font-semibold mb-6 text-xcend-100">Company</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Case Studies
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors">
+                <a href="#" className="text-xcend-100/80 hover:text-white transition-colors duration-300 flex items-center">
+                  <span className="inline-block w-1.5 h-1.5 bg-xcend-400 rounded-full mr-2 opacity-0 transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></span>
                   Privacy Policy
                 </a>
               </li>
@@ -134,24 +154,24 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact</h4>
+            <h4 className="text-lg font-semibold mb-6 text-xcend-100">Contact</h4>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 text-xcend-300 flex-shrink-0 mt-0.5" />
-                <span className="text-xcend-100/80">
+              <li className="flex items-start group">
+                <MapPin className="w-5 h-5 mr-3 text-xcend-300 flex-shrink-0 mt-0.5 group-hover:text-xcend-400 transition-colors duration-300" />
+                <span className="text-xcend-100/80 group-hover:text-white transition-colors duration-300">
                   1234 Innovation Way<br />
                   Tech Center, CA 94107
                 </span>
               </li>
-              <li className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-xcend-300 flex-shrink-0" />
-                <span className="text-xcend-100/80">
+              <li className="flex items-center group">
+                <Phone className="w-5 h-5 mr-3 text-xcend-300 flex-shrink-0 group-hover:text-xcend-400 transition-colors duration-300" />
+                <span className="text-xcend-100/80 group-hover:text-white transition-colors duration-300">
                   (123) 456-7890
                 </span>
               </li>
-              <li className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-xcend-300 flex-shrink-0" />
-                <span className="text-xcend-100/80">
+              <li className="flex items-center group">
+                <Mail className="w-5 h-5 mr-3 text-xcend-300 flex-shrink-0 group-hover:text-xcend-400 transition-colors duration-300" />
+                <span className="text-xcend-100/80 group-hover:text-white transition-colors duration-300">
                   hello@xcendlabs.com
                 </span>
               </li>
@@ -159,7 +179,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-xcend-800 mt-12 pt-8 text-center text-xcend-100/60 text-sm reveal-on-scroll">
+        <div className="border-t border-xcend-800/50 mt-12 pt-8 text-center text-xcend-100/60 text-sm reveal-on-scroll">
           <p>&copy; {new Date().getFullYear()} XcendLabs. All rights reserved.</p>
         </div>
       </div>
