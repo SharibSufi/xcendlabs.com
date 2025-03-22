@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Testimonials from '@/components/Testimonials';
+import Stats from '@/components/Stats';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -73,6 +74,7 @@ const Index = () => {
         <Hero />
         <Services />
         <Testimonials />
+        <Stats />
         <CTA />
       </main>
       <Footer />
