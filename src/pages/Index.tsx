@@ -7,6 +7,7 @@ import Testimonials from '@/components/Testimonials';
 import Stats from '@/components/Stats';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
+import CustomCursor from '@/components/CustomCursor';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,8 +54,8 @@ const Index = () => {
       <div className="fixed inset-0 bg-cyber-black flex items-center justify-center z-50">
         <div className="space-y-8 text-center">
           <div className="text-4xl font-orbitron tracking-wider">
-            <span className="text-cyan-400">Xcend</span>
-            <span className="font-light text-white">Labs</span>
+            <span className="text-cyan-400 font-bold">Xcend</span>
+            <span className="font-bold text-white">Labs</span>
           </div>
           <div className="w-16 h-16 relative mx-auto">
             <div className="absolute inset-0 rounded-full border-t-2 border-r-2 border-cyan-500 animate-spin"></div>
@@ -68,6 +69,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-cyber-black text-white font-exo">
+      <CustomCursor />
       <div className="cyber-grid absolute inset-0 pointer-events-none"></div>
       <Navbar />
       <main>

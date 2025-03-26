@@ -1,7 +1,6 @@
 
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { ArrowRight } from 'lucide-react';
 
 const CTA = () => {
@@ -55,21 +54,12 @@ const CTA = () => {
                   streamline your operations and accelerate your growth.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4">
-                  <Input 
-                    placeholder="Enter your email" 
-                    className="bg-white/80 border-xcend-100 h-12"
-                  />
-                  
+                <div className="flex justify-center pt-4">
                   <Button className="bg-xcend-600 hover:bg-xcend-700 text-white h-12 px-6">
-                    Get Started
+                    Book Your Free Strategy Call
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
-                
-                <p className="text-xs text-muted-foreground pt-4">
-                  By submitting, you agree to our privacy policy. We'll never share your information.
-                </p>
               </div>
             </div>
           </div>

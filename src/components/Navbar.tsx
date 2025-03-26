@@ -28,9 +28,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center group">
-          <h1 className="text-2xl font-orbitron tracking-wider">
+          <h1 className="text-2xl font-orbitron tracking-wider font-bold">
             <span className="text-cyan-400 group-hover:text-white transition-colors duration-300">Xcend</span>
-            <span className="font-light group-hover:text-cyan-400 transition-colors duration-300">Labs</span>
+            <span className="font-bold group-hover:text-cyan-400 transition-colors duration-300">Labs</span>
           </h1>
         </a>
 
