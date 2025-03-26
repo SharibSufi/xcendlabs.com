@@ -61,11 +61,6 @@
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
-    cursor: none;
-  }
-  
-  a, button, input, textarea, select, [role="button"] {
-    cursor: none;
   }
 }
 

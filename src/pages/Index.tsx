@@ -7,7 +7,6 @@ import Testimonials from '@/components/Testimonials';
 import Stats from '@/components/Stats';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
-import CustomCursor from '@/components/CustomCursor';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -69,7 +68,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-cyber-black text-white font-exo">
-      <CustomCursor />
       <div className="cyber-grid absolute inset-0 pointer-events-none"></div>
       <Navbar />
       <main>
